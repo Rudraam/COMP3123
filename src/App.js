@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./logo.svg";
 
-function App() {
+export default function App() {
+  // ← Edit these two lines with your real info
+  const STUDENT_ID = "101502928";
+  const STUDENT_NAME = "Rudramani Dhiman";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="certificate">
+      <img src={logo} className="react-mark" alt="React logo" />
+
+      <h1 className="title">Welcome to Fullstack Development - I</h1>
+      <h2 className="subtitle">React JS Programming Week09 Lab exercise</h2>
+
+      <p className="line strong">{STUDENT_ID}</p>
+      <p className="line">{STUDENT_NAME}</p>
+      <p className="line small">George Brown College, Toronto</p>
+    </main>
   );
 }
-
-export default App;

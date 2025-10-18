@@ -1,38 +1,59 @@
-.App {
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eaf8ff;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.certificate {
+  width: 100vw;                 
+  height: 100vh;                
+  background: #ffffff;
+  border: 10px solid #bfefff;  
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 80px 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;    
+  align-items: center;        
 }
 
-.App-link {
-  color: #61dafb;
+.react-mark {
+  width: clamp(160px, 25vw, 320px);
+  height: auto;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  margin: 10px 0;
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 6px 0 28px;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 500;
+}
+
+.line {
+  margin: 6px 0;
+  text-align: center;
+  font-size: clamp(15px, 1.8vw, 22px);
+}
+
+.line.strong {
+  font-weight: 700;
+}
+
+.line.small {
+  opacity: 0.85;
+  font-size: clamp(13px, 1.6vw, 20px);
 }
