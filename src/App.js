@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Form";
+import Display from "./components/Display";
 
 function App() {
+  const [submitted, setSubmitted] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="header">
+        <h1>Lab Week 10</h1>
       </header>
+
+      <main className="container">
+        <section className="card">
+          <h2 className="section-title">Data Entry Form</h2>
+          <Form onSubmit={setSubmitted} />
+        </section>
+
+        {submitted && (
+          <section className="card">
+            <h2 className="section-title">Submitted Output</h2>
+            {/* Render in the exact label/value block format */}
+            <Display data={submitted} />
+          </section>
+        )}
+      </main>
     </div>
   );
 }
